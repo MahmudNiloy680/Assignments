@@ -1,13 +1,13 @@
 #include <stdio.h>
 int main() 
 {
-    long long int A, B, Total;
+    long int A, B, Total;
    
 
-    scanf("%lld %lld", &A, &B);
+    scanf("%ld %ld", &A, &B);
     Total = A*B;
 
-    printf("%lld", Total);
+    printf("%ld", Total);
        
     return 0;
 }
