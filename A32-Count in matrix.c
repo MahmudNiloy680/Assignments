@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int freq[1000000] = {0};
 
