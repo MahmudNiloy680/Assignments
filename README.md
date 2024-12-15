@@ -4,5 +4,7 @@ Weekly Assignment Solutions
 
 A24 means Asignment 2 - Problem 4
 
+DSA -> Assignments of Data Structure and Algorithm course
+
 
 **might add detailed comments later
