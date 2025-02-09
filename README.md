@@ -5,8 +5,11 @@ CS Fundamentals With Phitron: Fall 2024
 
 
 Course 1: Introduction to Programming Language
+
 Course 2: Introduction to C++ for DSA (NO Assignments)
+
 Course 3: Basic Data Structures
+
 Course 4: Introduction to Algorithms
 
 
