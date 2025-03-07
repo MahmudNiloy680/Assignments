@@ -17,7 +17,7 @@ bool valid(int i, int j)
     return true;
 }
 
-int8_t dfs(int si, int sj)
+int dfs(int si, int sj)
 {
     vis[si][sj] = true;
     if (grid[si][sj] == room)
