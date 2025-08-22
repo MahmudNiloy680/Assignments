@@ -2,13 +2,13 @@
 using namespace std;
 
 char grid[1005][1005];
-char wall = '#', room = '.';
+char wall = '#', flr = '.';
 bool vis[1005][1005];
 
 vector<pair<int,int>> d = {{-1,0},{1,0},{0,-1},{0,1}};
 int n, m;
 
-
+bool swtch = false;
 
 bool valid(int i, int j)
 {
@@ -17,12 +17,13 @@ bool valid(int i, int j)
     return true;
 }
 
-int dfs(int si, int sj)
+void dfs(int si, int sj)
 {
     vis[si][sj] = true;
-    if (grid[si][sj] == room)
-    {      
-        return 1;
+    if (grid[si][sj] == 'B')
+    {    
+        swtch = true;    
+        return;
     }
     for(int i=0;i<4;i++)
     {
@@ -31,7 +32,7 @@ int dfs(int si, int sj)
 
         if(valid(ci,cj) && !vis[ci][cj])
             if (grid[ci][cj] != wall)
-                return dfs(ci,cj);
+                dfs(ci,cj);
     }
 }
 
@@ -46,7 +47,7 @@ int main()
         for(int j=0;j<m;j++)
         {
             cin >> grid[i][j];
-            if (grid[i][j] == room)
+            if (grid[i][j] == 'A')
             {    
                 si = i;
                 sj = j;
@@ -55,8 +56,8 @@ int main()
     }
 
     memset(vis,false,sizeof(vis));
-    int count = dfs(si,sj);
+    dfs(si,sj);
     
-    cout << count << endl;
+    (swtch) ? cout << "YES" : cout << "NO";
     return 0;
 }
